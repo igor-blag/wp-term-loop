@@ -4,6 +4,7 @@
 	const { InspectorControls, useBlockProps, useInnerBlocksProps } = wp.blockEditor;
 	const { PanelBody, SelectControl, TextControl } = wp.components;
 	const { useSelect } = wp.data;
+	const { __ } = wp.i18n;
 
 	registerBlockType( 'wp-term-loop/term-template', {
 		edit( props ) {
@@ -43,9 +44,9 @@
 					{},
 					el(
 						PanelBody,
-						{ title: 'Post Query' },
+						{ title: __( 'Post Query', 'wp-term-loop' ) },
 						el( SelectControl, {
-							label: 'Post Type',
+							label: __( 'Post Type', 'wp-term-loop' ),
 							value: attributes.postType,
 							options: postTypeOptions,
 							onChange: function ( val ) {
@@ -53,31 +54,31 @@
 							},
 						} ),
 						el( SelectControl, {
-							label: 'Order by',
+							label: __( 'Order by', 'wp-term-loop' ),
 							value: attributes.orderby,
 							options: [
-								{ label: 'Title', value: 'title' },
-								{ label: 'Date', value: 'date' },
-								{ label: 'Menu order', value: 'menu_order' },
-								{ label: 'Modified', value: 'modified' },
+								{ label: __( 'Title', 'wp-term-loop' ), value: 'title' },
+								{ label: __( 'Date', 'wp-term-loop' ), value: 'date' },
+								{ label: __( 'Menu order', 'wp-term-loop' ), value: 'menu_order' },
+								{ label: __( 'Modified', 'wp-term-loop' ), value: 'modified' },
 							],
 							onChange: function ( val ) {
 								setAttributes( { orderby: val } );
 							},
 						} ),
 						el( SelectControl, {
-							label: 'Order',
+							label: __( 'Order', 'wp-term-loop' ),
 							value: attributes.order,
 							options: [
-								{ label: 'A → Z', value: 'ASC' },
-								{ label: 'Z → A', value: 'DESC' },
+								{ label: __( 'A → Z', 'wp-term-loop' ), value: 'ASC' },
+								{ label: __( 'Z → A', 'wp-term-loop' ), value: 'DESC' },
 							],
 							onChange: function ( val ) {
 								setAttributes( { order: val } );
 							},
 						} ),
 						el( TextControl, {
-							label: 'Posts per term (-1 = all)',
+							label: __( 'Posts per term (-1 = all)', 'wp-term-loop' ),
 							type: 'number',
 							value: String( attributes.perPage ),
 							onChange: function ( val ) {

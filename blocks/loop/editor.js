@@ -4,6 +4,7 @@
 	const { InspectorControls, useBlockProps, useInnerBlocksProps } = wp.blockEditor;
 	const { PanelBody, SelectControl, ToggleControl } = wp.components;
 	const { useSelect } = wp.data;
+	const { __ } = wp.i18n;
 
 	registerBlockType( 'wp-term-loop/loop', {
 		edit( props ) {
@@ -33,7 +34,7 @@
 				template: [
 					[ 'core/heading', {
 						level: 2,
-						placeholder: 'Term name (use binding)',
+						placeholder: __( 'Term name (use binding)', 'wp-term-loop' ),
 						metadata: {
 							bindings: {
 								content: {
@@ -56,9 +57,9 @@
 					{},
 					el(
 						PanelBody,
-						{ title: 'Term Query' },
+						{ title: __( 'Term Query', 'wp-term-loop' ) },
 						el( SelectControl, {
-							label: 'Taxonomy',
+							label: __( 'Taxonomy', 'wp-term-loop' ),
 							value: attributes.taxonomy,
 							options: taxonomyOptions,
 							onChange: function ( val ) {
@@ -66,32 +67,32 @@
 							},
 						} ),
 						el( SelectControl, {
-							label: 'Order by',
+							label: __( 'Order by', 'wp-term-loop' ),
 							value: attributes.orderby,
 							options: [
-								{ label: 'Name', value: 'name' },
-								{ label: 'Slug', value: 'slug' },
-								{ label: 'Count', value: 'count' },
-								{ label: 'Term ID', value: 'term_id' },
-								{ label: 'Menu order', value: 'menu_order' },
+								{ label: __( 'Name', 'wp-term-loop' ), value: 'name' },
+								{ label: __( 'Slug', 'wp-term-loop' ), value: 'slug' },
+								{ label: __( 'Count', 'wp-term-loop' ), value: 'count' },
+								{ label: __( 'Term ID', 'wp-term-loop' ), value: 'term_id' },
+								{ label: __( 'Menu order', 'wp-term-loop' ), value: 'menu_order' },
 							],
 							onChange: function ( val ) {
 								setAttributes( { orderby: val } );
 							},
 						} ),
 						el( SelectControl, {
-							label: 'Order',
+							label: __( 'Order', 'wp-term-loop' ),
 							value: attributes.order,
 							options: [
-								{ label: 'A → Z', value: 'ASC' },
-								{ label: 'Z → A', value: 'DESC' },
+								{ label: __( 'A → Z', 'wp-term-loop' ), value: 'ASC' },
+								{ label: __( 'Z → A', 'wp-term-loop' ), value: 'DESC' },
 							],
 							onChange: function ( val ) {
 								setAttributes( { order: val } );
 							},
 						} ),
 						el( ToggleControl, {
-							label: 'Hide empty terms',
+							label: __( 'Hide empty terms', 'wp-term-loop' ),
 							checked: attributes.hideEmpty,
 							onChange: function ( val ) {
 								setAttributes( { hideEmpty: val } );

@@ -11,13 +11,27 @@
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: wp-term-loop
+ * Domain Path: /languages
  */
 
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'init', function (): void {
+	load_plugin_textdomain( 'wp-term-loop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	register_block_type( __DIR__ . '/blocks/loop' );
 	register_block_type( __DIR__ . '/blocks/term-template' );
+
+	wp_set_script_translations(
+		'wp-term-loop-loop-editor-script',
+		'wp-term-loop',
+		__DIR__ . '/languages'
+	);
+	wp_set_script_translations(
+		'wp-term-loop-term-template-editor-script',
+		'wp-term-loop',
+		__DIR__ . '/languages'
+	);
 } );
 
 // ── Block Binding source: term-loop/term-data ──────────────────────────────

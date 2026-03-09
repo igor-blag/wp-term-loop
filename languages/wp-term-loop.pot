@@ -1,0 +1,121 @@
+# Copyright (C) 2024 Igor Blagoveshchensky
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Term Loop 0.1.0\n"
+"Report-Msgid-Bugs-To: https://no-it.ru\n"
+"POT-Creation-Date: 2026-03-09 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. Plugin Name of the plugin
+msgid "WP Term Loop"
+msgstr ""
+
+#. Description of the plugin
+msgid "A Query Loop for taxonomy terms. Iterate terms with inner blocks, show posts per term, and bind term data to any block."
+msgstr ""
+
+#: wp-term-loop.php:27
+msgid "Term Data"
+msgstr ""
+
+#: blocks/loop/block.json
+msgctxt "block title"
+msgid "Term Loop"
+msgstr ""
+
+#: blocks/loop/block.json
+msgctxt "block description"
+msgid "Iterates taxonomy terms and renders inner blocks for each term."
+msgstr ""
+
+#: blocks/term-template/block.json
+msgctxt "block title"
+msgid "Term Template"
+msgstr ""
+
+#: blocks/term-template/block.json
+msgctxt "block description"
+msgid "Iterates posts within the current term. Place inside a Term Loop block."
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Term name (use binding)"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Term Query"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Taxonomy"
+msgstr ""
+
+#: blocks/loop/editor.js blocks/term-template/editor.js
+msgid "Order by"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Name"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Slug"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Count"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Term ID"
+msgstr ""
+
+#: blocks/loop/editor.js blocks/term-template/editor.js
+msgid "Menu order"
+msgstr ""
+
+#: blocks/loop/editor.js blocks/term-template/editor.js
+msgid "Order"
+msgstr ""
+
+#: blocks/loop/editor.js blocks/term-template/editor.js
+msgid "A → Z"
+msgstr ""
+
+#: blocks/loop/editor.js blocks/term-template/editor.js
+msgid "Z → A"
+msgstr ""
+
+#: blocks/loop/editor.js
+msgid "Hide empty terms"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Post Query"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Post Type"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Title"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Date"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Modified"
+msgstr ""
+
+#: blocks/term-template/editor.js
+msgid "Posts per term (-1 = all)"
+msgstr ""
