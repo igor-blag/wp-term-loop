@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-term-loop/term-template",
+	"version": "0.1.0",
+	"title": "Term Template",
+	"category": "theme",
+	"icon": "screenoptions",
+	"description": "Iterates posts within the current term. Place inside a Term Loop block.",
+	"textdomain": "wp-term-loop",
+	"parent": [ "wp-term-loop/loop" ],
+	"attributes": {
+		"postType": {
+			"type": "string",
+			"default": "post"
+		},
+		"perPage": {
+			"type": "number",
+			"default": -1
+		},
+		"orderby": {
+			"type": "string",
+			"default": "title"
+		},
+		"order": {
+			"type": "string",
+			"default": "ASC"
+		}
+	},
+	"usesContext": [
+		"wp-term-loop/termId",
+		"wp-term-loop/taxonomy"
+	],
+	"supports": {
+		"html": false,
+		"className": true
+	},
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}

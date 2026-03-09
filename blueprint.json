@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"preferredVersions": {
+		"wp": "6.9",
+		"php": "8.3"
+	},
+	"steps": [
+		{
+			"step": "activatePlugin",
+			"pluginPath": "wp-term-loop/wp-term-loop.php"
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $cats = [ 'Tutorials' => ['Getting Started with WordPress', 'Building Custom Themes'], 'News' => ['WordPress 6.9 Released', 'Gutenberg 22.6 Update'], 'Reviews' => ['Best Hosting Providers 2026', 'Top SEO Plugins Compared'] ]; foreach ($cats as $cat_name => $posts) { $term = wp_insert_term($cat_name, 'category'); $term_id = is_wp_error($term) ? $term->get_error_data() : $term['term_id']; foreach ($posts as $title) { $pid = wp_insert_post(['post_type'=>'post','post_title'=>$title,'post_status'=>'publish','post_content'=>'Demo content for '.$title.'.']); wp_set_post_categories($pid, [$term_id]); } } $block = '<!-- wp:wp-term-loop/loop {\"taxonomy\":\"category\",\"hideEmpty\":true} -->\n<!-- wp:heading {\"level\":2,\"metadata\":{\"bindings\":{\"content\":{\"source\":\"term-loop/term-data\",\"args\":{\"key\":\"name\"}}}}} -->\n<h2 class=\"wp-block-heading\"></h2>\n<!-- /wp:heading -->\n<!-- wp:wp-term-loop/term-template {\"postType\":\"post\"} -->\n<!-- wp:group {\"layout\":{\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group\"><!-- wp:post-title {\"level\":3,\"isLink\":true} /--><!-- wp:post-excerpt /--></div>\n<!-- /wp:group -->\n<!-- /wp:wp-term-loop/term-template -->\n<!-- /wp:wp-term-loop/loop -->'; wp_insert_post(['post_type'=>'page','post_title'=>'Term Loop Demo','post_name'=>'term-loop-demo','post_status'=>'publish','post_content'=>$block]); ?>"
+		}
+	]
+}

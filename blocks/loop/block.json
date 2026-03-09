@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-term-loop/loop",
+	"version": "0.1.0",
+	"title": "Term Loop",
+	"category": "theme",
+	"icon": "list-view",
+	"description": "Iterates taxonomy terms and renders inner blocks for each term.",
+	"textdomain": "wp-term-loop",
+	"attributes": {
+		"taxonomy": {
+			"type": "string",
+			"default": "category"
+		},
+		"orderby": {
+			"type": "string",
+			"default": "name"
+		},
+		"order": {
+			"type": "string",
+			"default": "ASC"
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": true
+		},
+		"parent": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"providesContext": {
+		"wp-term-loop/taxonomy": "taxonomy"
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"className": true,
+		"layout": {
+			"default": {
+				"type": "constrained"
+			}
+		}
+	},
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}
