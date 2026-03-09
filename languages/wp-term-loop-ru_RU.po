@@ -130,3 +130,42 @@ msgstr "Постраничная навигация терминов"
 #: blocks/term-template/editor.js
 msgid "Posts per term (-1 = all)"
 msgstr "Записей на термин (-1 = все)"
+
+#: blocks/nav/block.json
+msgctxt "block title"
+msgid "Term Navigation"
+msgstr "Навигация по терминам"
+
+#: blocks/nav/block.json
+msgctxt "block description"
+msgid "Displays a list of taxonomy terms as navigation links — either anchor links to sections on the same page or links to term archive pages."
+msgstr "Отображает список терминов таксономии в виде навигационных ссылок — якорных ссылок на разделы той же страницы или ссылок на страницы архивов."
+
+#: blocks/nav/editor.js
+msgid "Navigation Settings"
+msgstr "Настройки навигации"
+
+#: blocks/nav/editor.js
+msgid "Link mode"
+msgstr "Режим ссылок"
+
+#: blocks/nav/editor.js
+msgid "Anchor links (same page)"
+msgstr "Якорные ссылки (на этой странице)"
+
+#: blocks/nav/editor.js
+msgid "Archive pages"
+msgstr "Страницы архивов"
+
+#: blocks/nav/editor.js
+msgid "Show post count"
+msgstr "Показывать количество записей"
+
+#: blocks/nav/editor.js
+msgid "No terms found."
+msgstr "Термины не найдены."
+
+#: blocks/nav/render.php
+#. translators: %s: taxonomy label
+msgid "%s navigation"
+msgstr "Навигация: %s"

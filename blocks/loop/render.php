@@ -121,12 +121,16 @@ foreach ( $terms as $term ) {
 		'wp-term-loop/taxFilter' => $tax_filter,
 	];
 
+	$term_output = '';
 	foreach ( $block->inner_blocks as $inner_block ) {
-		$output .= ( new WP_Block(
+		$term_output .= ( new WP_Block(
 			$inner_block->parsed_block,
 			$term_context
 		) )->render();
 	}
+
+	$output .= '<div class="wp-term-loop-section" id="term-' . esc_attr( $term->slug ) . '">'
+		. $term_output . '</div>';
 }
 
 // ── Pagination nav ───────────────────────────────────────────────────────────

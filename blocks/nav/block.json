@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-term-loop/nav",
+	"version": "0.1.0",
+	"title": "Term Navigation",
+	"category": "theme",
+	"icon": "tag",
+	"description": "Displays a list of taxonomy terms as navigation links — either anchor links to sections on the same page or links to term archive pages.",
+	"textdomain": "wp-term-loop",
+	"attributes": {
+		"taxonomy": {
+			"type": "string",
+			"default": "category"
+		},
+		"linkMode": {
+			"type": "string",
+			"default": "anchors",
+			"enum": [ "anchors", "archives" ]
+		},
+		"orderby": {
+			"type": "string",
+			"default": "name"
+		},
+		"order": {
+			"type": "string",
+			"default": "ASC"
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCount": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"className": true,
+		"typography": {
+			"fontSize": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}

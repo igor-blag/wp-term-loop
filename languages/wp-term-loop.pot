@@ -127,3 +127,42 @@ msgstr ""
 #: blocks/term-template/editor.js
 msgid "Posts per term (-1 = all)"
 msgstr ""
+
+#: blocks/nav/block.json
+msgctxt "block title"
+msgid "Term Navigation"
+msgstr ""
+
+#: blocks/nav/block.json
+msgctxt "block description"
+msgid "Displays a list of taxonomy terms as navigation links — either anchor links to sections on the same page or links to term archive pages."
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "Navigation Settings"
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "Link mode"
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "Anchor links (same page)"
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "Archive pages"
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "Show post count"
+msgstr ""
+
+#: blocks/nav/editor.js
+msgid "No terms found."
+msgstr ""
+
+#: blocks/nav/render.php
+#. translators: %s: taxonomy label
+msgid "%s navigation"
+msgstr ""

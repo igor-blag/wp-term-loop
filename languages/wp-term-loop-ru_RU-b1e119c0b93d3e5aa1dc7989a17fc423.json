@@ -1,0 +1,28 @@
+{
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "ru_RU",
+				"plural_forms": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);"
+			},
+			"Navigation Settings": [ "Настройки навигации" ],
+			"Taxonomy": [ "Таксономия" ],
+			"Link mode": [ "Режим ссылок" ],
+			"Anchor links (same page)": [ "Якорные ссылки (на этой странице)" ],
+			"Archive pages": [ "Страницы архивов" ],
+			"Order by": [ "Сортировать по" ],
+			"Name": [ "Название" ],
+			"Slug": [ "Ярлык" ],
+			"Count": [ "Количество" ],
+			"Term ID": [ "ID термина" ],
+			"Menu order": [ "Порядок в меню" ],
+			"Order": [ "Порядок" ],
+			"A → Z": [ "А → Я" ],
+			"Z → A": [ "Я → А" ],
+			"Hide empty terms": [ "Скрывать пустые термины" ],
+			"Show post count": [ "Показывать количество записей" ],
+			"No terms found.": [ "Термины не найдены." ]
+		}
+	}
+}

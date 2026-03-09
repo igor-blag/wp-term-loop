@@ -21,6 +21,7 @@ add_action( 'init', function (): void {
 
 	register_block_type( __DIR__ . '/blocks/loop' );
 	register_block_type( __DIR__ . '/blocks/term-template' );
+	register_block_type( __DIR__ . '/blocks/nav' );
 
 	wp_set_script_translations(
 		'wp-term-loop-loop-editor-script',
@@ -29,6 +30,11 @@ add_action( 'init', function (): void {
 	);
 	wp_set_script_translations(
 		'wp-term-loop-term-template-editor-script',
+		'wp-term-loop',
+		__DIR__ . '/languages'
+	);
+	wp_set_script_translations(
+		'wp-term-loop-nav-editor-script',
 		'wp-term-loop',
 		__DIR__ . '/languages'
 	);
