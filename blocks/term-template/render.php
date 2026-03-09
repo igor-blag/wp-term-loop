@@ -12,17 +12,18 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$term_id  = $block->context['wp-term-loop/termId'] ?? 0;
-$taxonomy = $block->context['wp-term-loop/taxonomy'] ?? '';
+$term_id    = $block->context['wp-term-loop/termId'] ?? 0;
+$taxonomy   = $block->context['wp-term-loop/taxonomy'] ?? '';
+$tax_filter = $block->context['wp-term-loop/taxFilter'] ?? [];
 
 if ( ! $term_id || ! $taxonomy ) {
 	return;
 }
 
-$post_type     = $attributes['postType'] ?? 'post';
+$post_type      = $attributes['postType'] ?? 'post';
 $posts_per_page = (int) ( $attributes['perPage'] ?? -1 );
-$orderby       = $attributes['orderby'] ?? 'title';
-$order         = $attributes['order'] ?? 'ASC';
+$orderby        = $attributes['orderby'] ?? 'title';
+$order          = $attributes['order'] ?? 'ASC';
 
 $query_args = [
 	'post_type'      => $post_type,
@@ -36,6 +37,17 @@ $query_args = [
 		],
 	],
 ];
+
+// Apply taxFilter — additional taxonomy conditions from the parent loop.
+if ( ! empty( $tax_filter ) && is_array( $tax_filter ) ) {
+	foreach ( $tax_filter as $filter_taxonomy => $filter_terms ) {
+		$query_args['tax_query'][] = [
+			'taxonomy' => $filter_taxonomy,
+			'field'    => 'slug',
+			'terms'    => (array) $filter_terms,
+		];
+	}
+}
 
 /**
  * Filters the WP_Query arguments for the Term Template block.

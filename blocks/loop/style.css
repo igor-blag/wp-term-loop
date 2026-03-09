@@ -1,0 +1,37 @@
+.wp-term-loop-pagination {
+	display: flex;
+	gap: 0.5em;
+	justify-content: center;
+	margin-top: 2em;
+	flex-wrap: wrap;
+}
+
+.wp-term-loop-pagination__link,
+.wp-term-loop-pagination__current {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.25em;
+	height: 2.25em;
+	padding: 0 0.5em;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 0.875em;
+	line-height: 1;
+}
+
+.wp-term-loop-pagination__link {
+	color: currentColor;
+	border: 1px solid currentColor;
+}
+
+.wp-term-loop-pagination__link:hover {
+	background: currentColor;
+	color: #fff;
+}
+
+.wp-term-loop-pagination__current {
+	background: currentColor;
+	color: #fff;
+	font-weight: 700;
+}

@@ -119,6 +119,14 @@ msgstr "Дата"
 msgid "Modified"
 msgstr "Дата изменения"
 
+#: blocks/loop/editor.js
+msgid "Terms per page (0 = all)"
+msgstr "Терминов на странице (0 = все)"
+
+#: blocks/loop/render.php
+msgid "Term pagination"
+msgstr "Постраничная навигация терминов"
+
 #: blocks/term-template/editor.js
 msgid "Posts per term (-1 = all)"
 msgstr "Записей на термин (-1 = все)"

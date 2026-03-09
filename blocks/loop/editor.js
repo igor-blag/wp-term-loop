@@ -2,7 +2,7 @@
 	const { registerBlockType } = wp.blocks;
 	const { createElement: el, Fragment } = wp.element;
 	const { InspectorControls, useBlockProps, useInnerBlocksProps } = wp.blockEditor;
-	const { PanelBody, SelectControl, ToggleControl } = wp.components;
+	const { PanelBody, SelectControl, ToggleControl, TextControl } = wp.components;
 	const { useSelect } = wp.data;
 	const { __ } = wp.i18n;
 
@@ -96,6 +96,14 @@
 							checked: attributes.hideEmpty,
 							onChange: function ( val ) {
 								setAttributes( { hideEmpty: val } );
+							},
+						} ),
+						el( TextControl, {
+							label: __( 'Terms per page (0 = all)', 'wp-term-loop' ),
+							type: 'number',
+							value: String( attributes.termsPerPage || 0 ),
+							onChange: function ( val ) {
+								setAttributes( { termsPerPage: parseInt( val ) || 0 } );
 							},
 						} )
 					)

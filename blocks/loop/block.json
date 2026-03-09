@@ -28,10 +28,19 @@
 		"parent": {
 			"type": "number",
 			"default": 0
+		},
+		"taxFilter": {
+			"type": "object",
+			"default": {}
+		},
+		"termsPerPage": {
+			"type": "number",
+			"default": 0
 		}
 	},
 	"providesContext": {
-		"wp-term-loop/taxonomy": "taxonomy"
+		"wp-term-loop/taxonomy": "taxonomy",
+		"wp-term-loop/taxFilter": "taxFilter"
 	},
 	"supports": {
 		"html": false,
@@ -43,6 +52,7 @@
 			}
 		}
 	},
+	"style": "file:./style.css",
 	"editorScript": "file:./editor.js",
 	"render": "file:./render.php"
 }

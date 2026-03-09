@@ -116,6 +116,14 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
+#: blocks/loop/editor.js
+msgid "Terms per page (0 = all)"
+msgstr ""
+
+#: blocks/loop/render.php
+msgid "Term pagination"
+msgstr ""
+
 #: blocks/term-template/editor.js
 msgid "Posts per term (-1 = all)"
 msgstr ""

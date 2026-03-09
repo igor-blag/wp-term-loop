@@ -29,7 +29,8 @@
 	},
 	"usesContext": [
 		"wp-term-loop/termId",
-		"wp-term-loop/taxonomy"
+		"wp-term-loop/taxonomy",
+		"wp-term-loop/taxFilter"
 	],
 	"supports": {
 		"html": false,
